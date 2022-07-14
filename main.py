@@ -24,7 +24,7 @@ for tweet in posts[:10]:  # just want to see the top 10 from 100
     print(str(i) + ') ' + tweet.full_text + '\n')
     i = i+1
 
-# Creating dataframe with a column called tweets
+# Creating dataframe with a column having name "tweets"
 df = pd.DataFrame([tweet.full_text for tweet in posts], columns=['Tweets'])
 print(df)
 
@@ -43,7 +43,7 @@ df['Tweets'] = df['Tweets'].apply(cleanTxt)
 print(df)
 
 # sentiments
-analysis = TextBlob("Today was the best day ")
+analysis = TextBlob("Today was a good day ")
 analysis.sentiment
 # create a function to get the subjectivity of all the tweets
 
@@ -73,7 +73,7 @@ Cloud = WordCloud(width=500, height=300, random_state=0,
 plt.imshow(Cloud)
 plt.show()
 
-# Create a function to compute negative neutral and positive
+# Creating function to process positive,neutral and negative
 
 
 def getAnalysis(ranking):
@@ -105,8 +105,7 @@ plt.xlim(-1, 1)
 plt.xlabel('Polarity')
 plt.ylabel('Subjectivity')
 plt.show()
-
-# Only 3 neutral it is showing because it is overlapping
+# Only 3 neutral tweets would be shown because of data overlap
 
 df['Analysis'].value_counts().plot(kind='bar')
 plt.title("Sentiment Analysis")
