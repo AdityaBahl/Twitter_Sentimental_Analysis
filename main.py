@@ -31,12 +31,12 @@ print(df)
 # make a function to clean tweets
 
 
-def cleanTxt(text):
-    text = re.sub('@[A-Za-z0-9]+', '', text)  # removing mentions
-    text = re.sub("#", '', text)  # removing #
-    text = re.sub('RT[\s]+', '', text)  # removing Retweets
-    text = re.sub('https?:\/\/\S+', '', text)  # removing links
-    return text
+def cleanTxt(texts):
+    texts = re.sub('@[A-Za-z0-9]+', '', texts)  # removing mentions
+    texts = re.sub("#", '', texts)  # removing #
+    texts = re.sub('RT[\s]+', '', texts)  # removing Retweets
+    texts = re.sub('https?:\/\/\S+', '', texts)  # removing links
+    return texts
 
 
 df['Tweet'] = df['Tweet'].apply(cleanTxt)
