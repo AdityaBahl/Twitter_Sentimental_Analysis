@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import re
 from wordcloud import WordCloud
 plt.style.use('fivethirtyeight')
-search = input("Please Enter the Keyword for the analysis :")
+TwitterProfileId = input("Please Enter the Keyword for the analysis :")
 # Twitter API Credentials
 APIkey = "3OMBrpi6hg5kvQ3Zb1LMFwaEQ"
 APISecretKey = "f9fEg3dmaEtqaoZW90MqvElUBV7LvKHOg2zbOPDpmPBvD8BYFt"
@@ -20,10 +20,10 @@ Auth.set_access_token(accessToken, accessTokenSecreat)
 api = tweepy.API(Auth)
 # display
 posts = api.user_timeline(
-    screen_name=search, count=100, tweet_mode='extended')
+    screen_name=TwitterProfileId, count=500, tweet_mode='extended')
 i = 1
 # print(posts)
-for tweet in posts[:10]:  # just want to see the top 10 from 100
+for tweet in posts[:50]:  # just want to see the top 10 from 100
     print(str(i) + ') ' + tweet.full_text + '\n')
     i = i+1
 
