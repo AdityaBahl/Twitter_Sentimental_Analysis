@@ -23,7 +23,7 @@ posts = api.user_timeline(
     screen_name=TwitterProfileId, count=500, tweet_mode='extended')
 i = 1
 # print(posts)
-for tweet in posts[:50]:  # just want to see the top 10 from 100
+for tweet in posts[:50]:  # just want to see the top 50 from 500
     print(str(i) + ') ' + tweet.full_text + '\n')
     i = i+1
 
