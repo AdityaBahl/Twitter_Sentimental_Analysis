@@ -1,11 +1,14 @@
-import tweepy  # to gather tweeter data
+import tweepy  # An easy-to-use Python library for accessing the Twitter API.
+# TextBlob is a Python (2 and 3) library for processing textual data.
 from textblob import TextBlob
-import pandas as pd
+import pandas as pd  # open source data analysis and manipulation tool
+# matplotlib is multi-platform data visualization library built on Numpy array
 import matplotlib.pyplot as plt
+# This module provides regular expression matching operations similar to those found in Perl.
 import re
 from wordcloud import WordCloud
 plt.style.use('fivethirtyeight')
-
+search = input("Please Enter the Keyword for the analysis :")
 # Twitter API Credentials
 APIkey = "3OMBrpi6hg5kvQ3Zb1LMFwaEQ"
 APISecretKey = "f9fEg3dmaEtqaoZW90MqvElUBV7LvKHOg2zbOPDpmPBvD8BYFt"
@@ -17,7 +20,7 @@ Auth.set_access_token(accessToken, accessTokenSecreat)
 api = tweepy.API(Auth)
 # display
 posts = api.user_timeline(
-    screen_name='Trump', count=100, tweet_mode='extended')
+    screen_name=search, count=100, tweet_mode='extended')
 i = 1
 # print(posts)
 for tweet in posts[:10]:  # just want to see the top 10 from 100
