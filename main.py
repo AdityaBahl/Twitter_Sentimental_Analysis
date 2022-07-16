@@ -1,5 +1,5 @@
 import tweepy  # An easy-to-use Python library for accessing the Twitter API.
-# TextBlob is a Python (2 and 3) library for processing textual data.
+# TextBlob is a Python library for processing textual data.
 from textblob import TextBlob
 import pandas as pd  # open source data analysis and manipulation tool
 # matplotlib is multi-platform data visualization library built on Numpy array
@@ -98,7 +98,7 @@ df['Analysis'].value_counts()
 print(df.shape)
 
 # plotting scatter plot
-plt.figure(figsize=(8, 6))
+plt.figure(figsize=(10, 8))
 for i in range(0, df.shape[0]):
     plt.scatter(df['Polarity'][i], df['Subjectivity'][i], color='Blue')
 
