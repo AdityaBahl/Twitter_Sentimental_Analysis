@@ -66,7 +66,6 @@ Python libraries like :-
 #### **TWEETS MINING**
 
 Authorize twitter API client.
-![image](https://user-images.githubusercontent.com/90335449/179509126-77e25609-dda1-43ce-9240-16664e689175.png)
 
 We use this code to fetch tweets, and filter the retweets and links after authorization of Twitter API.
 ![image](https://user-images.githubusercontent.com/90335449/179509143-89129b80-c12b-454f-b7b9-5b9c9374a3ce.png)
