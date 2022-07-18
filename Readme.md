@@ -39,7 +39,10 @@ This project was done using NLP (Natural Language Processing) techniques. Twitte
 #### **DEVELOPER ACCOUNT**
 
 In order to fetch tweets through Twitter API, one needs to create a “TWITTER DEVELOPER ACCOUNT” from twitter developer portal and register an app through their twitter account.
+![image](https://user-images.githubusercontent.com/90335449/179509023-22cfbfba-c43c-4f31-b9e3-abf5b5c8bf67.png)
+
 Once the app is created, open the ‘Keys and Tokens’ tab, and copy ‘API Key’, ‘API Secret’, ‘Access token’ and ‘Access Token Secret’.
+![image](https://user-images.githubusercontent.com/90335449/179509053-246a4466-0e2d-4b9f-a54f-7fbd5f008879.png)
 
 **I carried out the following steps for the project:**</br>
 • Import libraries</br>
@@ -48,6 +51,7 @@ Once the app is created, open the ‘Keys and Tokens’ tab, and copy ‘API Key
 • Tweets processing</br>
 • Data exploration</br>
 • Sentimental Analysis</br>
+![image](https://user-images.githubusercontent.com/90335449/179509106-dc8aa6e2-dc40-49e2-83fd-611484869d84.png)
 
 #### **IMPORTING LIBRARIES**
 
@@ -62,8 +66,10 @@ Python libraries like :-
 #### **TWEETS MINING**
 
 Authorize twitter API client.
+![image](https://user-images.githubusercontent.com/90335449/179509126-77e25609-dda1-43ce-9240-16664e689175.png)
 
 We use this code to fetch tweets, and filter the retweets and links after authorization of Twitter API.
+![image](https://user-images.githubusercontent.com/90335449/179509143-89129b80-c12b-454f-b7b9-5b9c9374a3ce.png)
 
 I created a dataframe using pandas library.
 
@@ -72,6 +78,8 @@ I created a dataframe using pandas library.
 Data cleaning is the process of fixing or removing incorrect, corrupted, incorrectly formatted, duplicate, or incomplete data within a dataset.
 The ultimate goal is to clean up the individual tweets.
 To remove the mentions, #, and emojis, I created a function cleanTxt(text) which uses re library.
+![image](https://user-images.githubusercontent.com/90335449/179509190-d95b51c3-2012-4d88-accc-637c915f2271.png)
+
 To make the cleaning more efficient, I converted all the tweets to lower case, removed the punctuation marks, or any irrelevant character and also removed stop words from the tokens, by using stop words library.
 Stop words are the commonly used words which are irrelevant in text analysis like I, am, you, are, etc.
 Additionally, I used a concept known as “Lemmatization”. This is a process of returning words to their “base” form. I implemented it using WordNetLemmatizer.
@@ -83,7 +91,7 @@ Note that, the more you clean your data, the more effective and accurate your re
 ##### **WORD CLOUD**
 
 It is a visual representation of text data, which is often used to depict keyword metadata.
-![image](https://user-images.githubusercontent.com/95757668/155474773-badd57ae-0f57-4568-bf48-8eb321779592.png)
+![image](https://user-images.githubusercontent.com/90335449/179509303-0c0bea02-ad77-4f8a-9ee9-968cb1025913.png)
 
 Using the WordCloud library, you can generate a Word Cloud based on the word frequency and superimpose these words on any image. In this case, I used a rectangular block and Matplotlib to display the image. The Word Cloud shows, words with higher frequency in bigger text size while “not-so” common words are in smaller text sizes.
 It can also be used to check whether our cleaning was successful or not, by taking a look at word cloud and seeing if the words make any sense or not.
@@ -94,15 +102,22 @@ For this analysis, I went with TextBlob. Text Blob analyzes sentences by giving 
 Polarity simply means emotions expressed in a sentence. Emotions are closely related to sentiments. The strength of a sentiment is typically linked to the intensity of certain emotions, e.g., joy and anger.
 Subjectivity, subjective sentence expresses some personal feelings, views, or beliefs. A subjective sentence may not express any sentiment.
 I created two columns of subjectivity and polarity in my dataframe.
+![image](https://user-images.githubusercontent.com/90335449/179509367-9736ec22-07c4-4eda-af12-1bf07181e7e1.png)
 
 A polarity score of < 0 is Negative, 0 is Neutral while>0 is Positive. I used the “apply” method on the “Polarity” column in my dataframe to return the respective sentiment category. And create a column “Analysis”.
 Now, subsequently analysis has been for all the positive/negative tweets or not.
 
 #### **POLARITY AND SUBJECTIVITY GRAPH**
 
+![image](https://user-images.githubusercontent.com/90335449/179509400-3575b12d-0730-4a7b-888a-73f764b3231f.png)
+
 #### **CALCULATING THE PERCENTAGE AND NUMBER OF POSITIVE, NEGATIVE, NEUTRAL TWEETS**
 
+![image](https://user-images.githubusercontent.com/90335449/179509415-bf1de545-d611-4a2c-823f-2e2e5211366e.png)
+
 #### **DISTRIBUTION OF SENTIMENTS CATEGORY**
+
+![image](https://user-images.githubusercontent.com/90335449/179509446-7eb87bee-10c2-4b8f-852e-f13760a2c1d5.png)
 
 #### **PROJECT LIMITATIONS AND CHALLENGES**
 
