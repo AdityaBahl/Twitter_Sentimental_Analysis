@@ -52,7 +52,7 @@ Once the app is created, open the ‘Keys and Tokens’ tab, and copy ‘API Key
 #### **IMPORTING LIBRARIES**
 
 Python libraries like :-
-• • Tweepy :- for tweets mining
+• Tweepy :- for tweets mining
 • Pandas :- for data cleaning/manipulation
 • TextBlob :- for sentimental analysis
 • MatPlotlib :- Data exploration
@@ -94,7 +94,7 @@ For this analysis, I went with TextBlob. Text Blob analyzes sentences by giving 
 Polarity simply means emotions expressed in a sentence. Emotions are closely related to sentiments. The strength of a sentiment is typically linked to the intensity of certain emotions, e.g., joy and anger.
 Subjectivity, subjective sentence expresses some personal feelings, views, or beliefs. A subjective sentence may not express any sentiment.
 I created two columns of subjectivity and polarity in my dataframe.
-![image](https://user-images.githubusercontent.com/95757668/155474839-512f724c-924d-49c3-af4a-609678501f73.png)
+
 A polarity score of < 0 is Negative, 0 is Neutral while>0 is Positive. I used the “apply” method on the “Polarity” column in my dataframe to return the respective sentiment category. And create a column “Analysis”.
 Now, subsequently analysis has been for all the positive/negative tweets or not.
 
