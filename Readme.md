@@ -1,8 +1,8 @@
-# Twitter-Sentimental-Analysis
+# Twitter Sentimental Analysis
 
 #### **PROBLEM STATEMENT:**
 
-Analyzing twitter sentiments on latest twitter data.
+Analyzing twitter sentiments based on latest twitter data.
 
 #### **MOTIVATION:**
 
@@ -25,7 +25,6 @@ The most important thing for a company is to listen to market and meet the custo
 Sentimental analysis is the process of detecting positive and negative sentiment in text. It is also known as opinion mining.
 Sentimental analysis has been acquiring a crucial role in both commercial and research applications because of their possible applicability to several different fields. Therefore, a huge number of companies have included the analysis of opinions and sentiments of customers as part of their mission.
 One of the most interesting applications of these approaches involves the automatic analysis of social network messages, on the basis of the feelings and emotions conveyed.
-![image](https://user-images.githubusercontent.com/95757668/155474391-25d8801a-4e20-4a5e-9c9d-598d5b407e6d.png)
 
 #### **WHY SENTIMENTAL ANALYSIS?**
 
@@ -40,7 +39,7 @@ This project was done using NLP (Natural Language Processing) techniques. Twitte
 #### **DEVELOPER ACCOUNT**
 
 In order to fetch tweets through Twitter API, one needs to create a “TWITTER DEVELOPER ACCOUNT” from twitter developer portal and register an app through their twitter account.
-Once the app is created, open the ‘Keys and Tokens’ tab, and copy ‘Consumer Key’, ‘Consumer Secret’, ‘Access token’ and ‘Access Token Secret’.
+Once the app is created, open the ‘Keys and Tokens’ tab, and copy ‘API Key’, ‘API Secret’, ‘Access token’ and ‘Access Token Secret’.
 
 **I carried out the following steps for the project:**</br>
 • Import libraries</br>
@@ -53,23 +52,20 @@ Once the app is created, open the ‘Keys and Tokens’ tab, and copy ‘Consume
 #### **IMPORTING LIBRARIES**
 
 Python libraries like :-
-• Tweepy :- for tweets mining</br>
-• Pandas :- for data cleaning/manipulation</br>
-• NLTK :- Natural Language Toolkit</br>
-• TextBlob :- for sentimental analysis</br>
-• MatPlotlib :- Data exploration</br>
-• word cloud :- Data exploration</br>
-• Plotly :- for data visulalization</br>
+• • Tweepy :- for tweets mining
+• Pandas :- for data cleaning/manipulation
+• TextBlob :- for sentimental analysis
+• MatPlotlib :- Data exploration
+• WordCloud :- Data exploration
 • Re :- Regular expression, it lets you check is a particular string matches a given expression
 
 #### **TWEETS MINING**
 
 Authorize twitter API client.
 
-my_credentials.json file consists of all the keys and this step will authorize the API client.
+We use this code to fetch tweets, and filter the retweets and links after authorization of Twitter API.
 
-We use this code to fetch tweets, and filter the retweets and links.
-I created a dataframe using pandas library with a column tweets
+I created a dataframe using pandas library.
 
 #### **DATA CLEANING AND TWEETS PROCESSING**
 
@@ -78,14 +74,7 @@ The ultimate goal is to clean up the individual tweets.
 To remove the mentions, #, and emojis, I created a function cleanTxt(text) which uses re library.
 To make the cleaning more efficient, I converted all the tweets to lower case, removed the punctuation marks, or any irrelevant character and also removed stop words from the tokens, by using stop words library.
 Stop words are the commonly used words which are irrelevant in text analysis like I, am, you, are, etc.
-Additionally, I used a concept known as “Lemmatization”. This is a process of returning words to their “base” form.
-BEFORE CLEANING   
-
-![image](https://user-images.githubusercontent.com/95757668/155474642-be23ee88-c8c6-4d72-b7c2-61b7a29a4f85.png)
-
-                         AFTER CLEANING
-
-![image](https://user-images.githubusercontent.com/95757668/155474698-bfdc0f21-f593-46bf-8d32-70bf0b9247ca.png)
+Additionally, I used a concept known as “Lemmatization”. This is a process of returning words to their “base” form. I implemented it using WordNetLemmatizer.
 
 Note that, the more you clean your data, the more effective and accurate your result will be.
 
@@ -101,39 +90,34 @@ It can also be used to check whether our cleaning was successful or not, by taki
 
 #### **SENTIMENTAL ANALYSIS**
 
-For this analysis, I went with TextBlob. Text Blob analyzes sentences by giving each tweet a Subjectivity and polarity score. Based on the Plolarity score, one can define which tweets were Positive, Negative, or Neutral.
-Polarity simply means emotions expressed in a sentence. Emotions are closely related to sentiments. The strength of a sentiment is typically linked to the intensity of certain emotions, e,g, joy and anger.
+For this analysis, I went with TextBlob. Text Blob analyzes sentences by giving each tweet a Subjectivity and polarity score. Based on the Polarity score, one can define which tweets were Positive, Negative, or Neutral.
+Polarity simply means emotions expressed in a sentence. Emotions are closely related to sentiments. The strength of a sentiment is typically linked to the intensity of certain emotions, e.g., joy and anger.
 Subjectivity, subjective sentence expresses some personal feelings, views, or beliefs. A subjective sentence may not express any sentiment.
 I created two columns of subjectivity and polarity in my dataframe.
 ![image](https://user-images.githubusercontent.com/95757668/155474839-512f724c-924d-49c3-af4a-609678501f73.png)
 A polarity score of < 0 is Negative, 0 is Neutral while>0 is Positive. I used the “apply” method on the “Polarity” column in my dataframe to return the respective sentiment category. And create a column “Analysis”.
-Now, to check whether the analysis has been done properly or not I have asked the user if he/she wish to see all the positive/negative tweets or not.
-![image](https://user-images.githubusercontent.com/95757668/155474917-170f3267-734d-4ddb-83d1-9c1f8a32ce54.png)
-
-![image](https://user-images.githubusercontent.com/95757668/155474936-f6560622-2458-4ba4-a268-faf4c5da9a50.png)
-
-If you press 1 all the positive or negative tweets will be printed.
+Now, subsequently analysis has been for all the positive/negative tweets or not.
 
 #### **POLARITY AND SUBJECTIVITY GRAPH**
 
-![image](https://user-images.githubusercontent.com/95757668/155475046-af3498e8-0184-4973-8178-a2c4b504314d.png)
-
 #### **CALCULATING THE PERCENTAGE AND NUMBER OF POSITIVE, NEGATIVE, NEUTRAL TWEETS**
-
-![image](https://user-images.githubusercontent.com/95757668/155475133-8ebe6917-70bc-471c-aabc-30c5088c8c82.png)
-
-![image](https://user-images.githubusercontent.com/95757668/155475148-1218f0c4-2f13-4f63-bad2-275cb0f50a0c.png)
 
 #### **DISTRIBUTION OF SENTIMENTS CATEGORY**
 
-![image](https://user-images.githubusercontent.com/95757668/155485469-820bd184-702b-4cda-8514-5ff4a2ec48a5.png)
+#### **PROJECT LIMITATIONS AND CHALLENGES**
 
-![image](https://user-images.githubusercontent.com/95757668/155485484-ec03ff5d-097e-4c5d-89db-32b78fe5e4ea.png)
+Insufficient or limited word coverage as many new words and their semantics must be updated in the lexical database.
+The accuracy of sentiment classification is also challenging task in sentimental analysis for example, words such as “love” and “hate” are on positive (+1) and negative (-1) scores in polarity. But there are in-between conjugations of words such as “not-so-bad” that can mean “neutral”.
+Also, people use irony and sarcasm in casual conversations and memes on social media. The act of expressing negative sentiment using backhanded compliments can make it difficult for sentimental analysis tools to detect the true context of what the response is actually implying.
+
+#### **Conclusion**
+
+I learned many new techniques and enjoyed the process. There were a lot of problems, but removing errors, yeah, that’s what we have to learn. The project may not give accurate results in some cases as mentioned above, and there are quite a few solutions too, I will definitely explore this domain further.
 
 #### **REFERENCES**
 
-• https://www.ijcaonline.org/research/volume125/number3/dandrea-2015-ijca-905866.pdf</br>
-• https://textblob.readthedocs.io/en/dev/quickstart.html#sentiment-analysis</br>
-• https://textblob.readthedocs.io/en/dev/_modules/textblob/en/sentiments.html</br>
-• https://www.geeksforgeeks.org/twitter-sentiment-analysis-using-python/</br>
+• https://www.ijcaonline.org/research/volume125/number3/dandrea-2015-ijca-905866.pdf
+• https://textblob.readthedocs.io/en/dev/quickstart.html#sentiment-analysis
+• https://textblob.readthedocs.io/en/dev/_modules/textblob/en/sentiments.html
+• https://www.geeksforgeeks.org/twitter-sentiment-analysis-using-python/
 • https://towardsdatascience.com/step-by-step-twitter-sentiment-analysis-in-python-d6f650ade58d
