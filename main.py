@@ -10,10 +10,10 @@ from wordcloud import WordCloud
 plt.style.use('fivethirtyeight')
 TwitterProfileId = input("Please Enter the Keyword for the analysis :")
 # Twitter API Credentials
-APIkey = "3OMBrpi6hg5kvQ3Zb1LMFwaEQ"
-APISecretKey = "f9fEg3dmaEtqaoZW90MqvElUBV7LvKHOg2zbOPDpmPBvD8BYFt"
-accessToken = "1529864260473409545-9wzTxuhcOAc5xwvtpeHYw51NpsQby3"
-accessTokenSecreat = "ffiOk1LMVMggUkFvMQKTVtroqQOMhJVfGc1605Iv23Tqy"
+APIkey = ""
+APISecretKey = ""
+accessToken = ""
+accessTokenSecreat = ""
 # create the object for authentication
 Auth = tweepy.OAuthHandler(APIkey, APISecretKey)
 Auth.set_access_token(accessToken, accessTokenSecreat)
