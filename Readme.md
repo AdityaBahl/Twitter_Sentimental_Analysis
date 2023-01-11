@@ -57,12 +57,13 @@ Once the app is created, open the ‘Keys and Tokens’ tab, and copy ‘API Key
 #### **IMPORTING LIBRARIES**
 
 Python libraries like :-
-• Tweepy :- for tweets mining
-• Pandas :- for data cleaning/manipulation
-• TextBlob :- for sentimental analysis
-• MatPlotlib :- Data exploration
-• WordCloud :- Data exploration
-• Re :- Regular expression, it lets you check is a particular string matches a given expression
+
+1. Tweepy :- for tweets mining
+2. Pandas :- for data cleaning/manipulation
+3. TextBlob :- for sentimental analysis
+4. MatPlotlib :- Data exploration
+5. WordCloud :- Data exploration
+6. Re :- Regular expression, it lets you check is a particular string matches a given expression
 
 #### **TWEETS MINING**
 
