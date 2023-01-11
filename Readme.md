@@ -126,11 +126,11 @@ Insufficient or limited word coverage as many new words and their semantics must
 The accuracy of sentiment classification is also challenging task in sentimental analysis for example, words such as “love” and “hate” are on positive (+1) and negative (-1) scores in polarity. But there are in-between conjugations of words such as “not-so-bad” that can mean “neutral”.
 Also, people use irony and sarcasm in casual conversations and memes on social media. The act of expressing negative sentiment using backhanded compliments can make it difficult for sentimental analysis tools to detect the true context of what the response is actually implying.
 
-### **Conclusion**
+## **Conclusion**
 
 I learned many new techniques and enjoyed the process. There were a lot of problems, but removing errors, yeah, that’s what we have to learn. The project may not give accurate results in some cases as mentioned above, and there are quite a few solutions too, I will definitely explore this domain further.
 
-### **REFERENCES**
+## **REFERENCES**
 
 1. https://www.ijcaonline.org/research/volume125/number3/dandrea-2015-ijca-905866.pdf
 2. https://textblob.readthedocs.io/en/dev/quickstart.html#sentiment-analysis
