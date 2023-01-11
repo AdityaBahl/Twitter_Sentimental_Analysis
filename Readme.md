@@ -132,8 +132,8 @@ I learned many new techniques and enjoyed the process. There were a lot of probl
 
 #### **REFERENCES**
 
-• https://www.ijcaonline.org/research/volume125/number3/dandrea-2015-ijca-905866.pdf
-• https://textblob.readthedocs.io/en/dev/quickstart.html#sentiment-analysis
-• https://textblob.readthedocs.io/en/dev/_modules/textblob/en/sentiments.html
-• https://www.geeksforgeeks.org/twitter-sentiment-analysis-using-python/
-• https://towardsdatascience.com/step-by-step-twitter-sentiment-analysis-in-python-d6f650ade58d
+1. https://www.ijcaonline.org/research/volume125/number3/dandrea-2015-ijca-905866.pdf
+2. https://textblob.readthedocs.io/en/dev/quickstart.html#sentiment-analysis
+3. https://textblob.readthedocs.io/en/dev/_modules/textblob/en/sentiments.html
+4. https://www.geeksforgeeks.org/twitter-sentiment-analysis-using-python/
+5. https://towardsdatascience.com/step-by-step-twitter-sentiment-analysis-in-python-d6f650ade58d
