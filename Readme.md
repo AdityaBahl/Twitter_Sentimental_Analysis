@@ -45,13 +45,14 @@ Once the app is created, open the ‘Keys and Tokens’ tab, and copy ‘API Key
 ![image](https://user-images.githubusercontent.com/90335449/179509053-246a4466-0e2d-4b9f-a54f-7fbd5f008879.png)
 
 **I carried out the following steps for the project:**</br>
-• Import libraries</br>
-• Tweets mining</br>
-• Data cleaning</br>
-• Tweets processing</br>
-• Data exploration</br>
-• Sentimental Analysis</br>
-![image](https://user-images.githubusercontent.com/90335449/179509106-dc8aa6e2-dc40-49e2-83fd-611484869d84.png)
+
+1. Import libraries</br>
+2. Tweets mining</br>
+3. Data cleaning</br>
+4. Tweets processing</br>
+5. Data exploration</br>
+6. Sentimental Analysis</br>
+   ![image](https://user-images.githubusercontent.com/90335449/179509106-dc8aa6e2-dc40-49e2-83fd-611484869d84.png)
 
 #### **IMPORTING LIBRARIES**
 
